@@ -1,0 +1,121 @@
+<section class="caf-benefits" aria-label="Magic Reprog, Carte partenaires, Clé Auto Academy, Service client">
+  <div class="caf-benefits__grid">
+    <!-- 1) Magic Reprog -->
+    <article class="caf-card">
+      <div class="caf-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" aria-label="Magic Reprog" focusable="false">
+          <path d="M7 3h10a2 2 0 0 1 2 2v2h2v2h-2v2h2v2h-2v2h2v2h-2v2a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-2H3v-2h2v-2H3v-2h2V9H3V7h2V5a2 2 0 0 1 2-2Zm0 4v10h10V7H7Zm3 2h4v2h-4V9Zm0 4h4v2h-4v-2Z"/>
+        </svg>
+      </div>
+      <h3 class="caf-card__title">Magic Reprog</h3>
+      <p class="caf-card__text">
+        Modifiez votre fichier de cartographie moteur en ligne sur notre site ! <strong>Stage 1, FAP Off, DTC Off, AdBlue Off</strong> et plus de 30 options disponibles !
+      </p>
+      <div class="caf-actions">
+        <a class="caf-btn" href="https://magicreprog.com" target="_blank" rel="noopener">Découvrir Magic Reprog</a>
+      </div>
+    </article>
+
+    <!-- 2) Carte des partenaires -->
+    <article class="caf-card">
+      <div class="caf-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" aria-label="Carte des partenaires" focusable="false">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/>
+        </svg>
+      </div>
+      <h3 class="caf-card__title">Carte des partenaires</h3>
+      <p class="caf-card__text">
+        Trouvez un <strong>serrurier automobile</strong> près de chez vous : indiquez votre code postal, sélectionnez un professionnel et <strong>contactez-le directement.</strong>
+      </p>
+      <div class="caf-actions">
+        <a class="caf-btn caf-btn--outline" href="https://cleauto.fr/fr/content/24-carte-des-partenaires">Voir la carte</a>
+      </div>
+    </article>
+
+    <!-- 3) Clé Auto Academy -->
+    <article class="caf-card">
+      <div class="caf-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img" aria-label="Clé Auto Academy" focusable="false">
+          <path d="M12 3 2 8l10 5 8-4.1V15h2V8L12 3Zm-6 9.5V16l6 3 6-3v-3.5l-6 3-6-3Z"/>
+        </svg>
+      </div>
+      <h3 class="caf-card__title">Clé Auto Academy</h3>
+      <p class="caf-card__text">
+        Suivez nos <strong>formations et tutoriels vidéo</strong> en serrurerie automobile, maîtrisez la programmation de clés et intégrez le <strong>réseau Clé Auto France</strong>.
+      </p>
+      <div class="caf-actions">
+        <a class="caf-btn" href="https://cleautoacademy.fr" target="_blank" rel="noopener">Découvrir Clé Auto Academy</a>
+      </div>
+    </article>
+
+    <!-- 4) Service client — s’étire sur 3 colonnes en desktop -->
+    <article class="caf-card caf-card--service">
+      
+      <h3 class="caf-card__title">Service client</h3>
+      <p class="caf-card__text">
+        Du lundi au vendredi <strong>9 h–17 h</strong> ｜
+        Tél : <a href="tel:+33328587635" class="caf-link">03 28 58 76 35</a> ｜
+        E-mail : <a href="https://cleauto.fr/fr/nous-contacter" class="caf-link">Nous contacter</a> —
+        Facebook : <a href="https://www.facebook.com/Cl%C3%A9-Auto-by-Serrurerie-Pasteur-Coudekerque-968028866541813/" class="caf-link">Clé Auto</a>
+      </p>
+    </article>
+  </div>
+</section>
+
+<style>
+  @media (min-width:768px){
+  .caf-card--service{
+    text-align:center;}}
+  .caf-benefits{
+    --caf-blue:#0949a7; --caf-green:#8dbf1a; --caf-bg:#f5f5f5;
+    --caf-white:#fff; --caf-text:#182230; --caf-muted:#5c667a;
+    font-family:"Montserrat","Overpass",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;
+    background: linear-gradient(180deg,var(--caf-white),var(--caf-bg));
+    border:1px solid #e9eef5; border-radius:18px;
+    padding: clamp(16px,3vw,28px); box-shadow:0 12px 30px -12px rgba(0,0,0,.15);
+    margin:24px 0;
+  }
+  .caf-benefits__grid{ display:grid; grid-template-columns:1fr; gap: clamp(14px,2.5vw,22px); }
+  @media (min-width:768px){
+    .caf-benefits__grid{ grid-template-columns: repeat(3,1fr); }
+    .caf-card--service{ grid-column: 1 / -1; } /* s'étire sur 3 colonnes */
+  }
+
+  .caf-card{
+    background:var(--caf-white); border:1px solid #eef2f7; border-radius:16px;
+    padding: clamp(16px,2.2vw,22px); position:relative; overflow:hidden;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .caf-card::after{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background: radial-gradient(120px 60px at 0 0, rgba(141,191,26,.12), transparent 60%),
+                radial-gradient(120px 60px at 100% 100%, rgba(0,74,173,.10), transparent 60%);
+  }
+  .caf-card:hover{ transform: translateY(-3px); box-shadow:0 14px 36px -12px rgba(0,28,90,.25); border-color: rgba(0,74,173,.18); }
+
+  .caf-card__icon{
+    width:56px;height:56px;border-radius:14px;display:grid;place-items:center;
+    background: conic-gradient(from 210deg at 50% 50%, var(--caf-blue), var(--caf-green));
+    box-shadow: inset 0 0 0 6px #fff, 0 8px 18px -8px rgba(0,0,0,.35); margin-bottom:12px;
+  }
+  .caf-card__icon svg{ width:28px;height:28px;fill:#fff; }
+
+  .caf-card__title{ font-size:clamp(18px,1.8vw,20px); line-height:1.2; color:var(--caf-text); margin:4px 0 8px; font-weight:700; letter-spacing:.2px; }
+  .caf-card__text{ color:var(--caf-muted); line-height:1.6; margin:0 0 12px; font-size:15px; }
+
+  .caf-actions{ margin-top: 8px; }
+  .caf-btn{
+    display:inline-block; border:1px solid var(--caf-blue); background:var(--caf-blue); color:#fff;
+    padding:10px 14px; border-radius:10px; font-weight:600; text-decoration:none;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+    box-shadow: 0 6px 16px -8px rgba(0,74,173,.6);
+  }
+  .caf-btn:hover{ transform: translateY(-1px); box-shadow:0 10px 22px -10px rgba(0,74,173,.65); }
+  .caf-btn--outline{ background:#fff; color:var(--caf-blue); border-color: rgba(0,74,173,.35); box-shadow:none; }
+  .caf-btn--outline:hover{ background: rgba(0,74,173,.06); }
+
+  .caf-link{
+    color: var(--caf-blue); text-decoration: none; border-bottom: 1px solid rgba(0,74,173,.25);
+  }
+  .caf-link:hover{ color:#003b8a; border-color: rgba(0,74,173,.5); }
+</style>
